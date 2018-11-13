@@ -1,0 +1,31 @@
+{
+  "name": "learn-alphabet-for-kids",
+  "version": "1.0.0",
+  "description": "This is my web site to present information such as: Work, Experience, Portfolio, Contact",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuanrobo/tuanrobo.github.io.git"
+  },
+  "author": "tuanrobo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tuanrobo/tuanrobo.github.io/issues"
+  },
+  "homepage": "https://github.com/tuanrobo/tuanrobo.github.io#readme",
+  "dependencies": {
+    "bourbon": "^5.1.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1",
+    "node-bourbon": "^4.2.8",
+    "node-sass": "^4.10.0",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

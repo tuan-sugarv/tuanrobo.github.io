@@ -1,0 +1,42 @@
+@import "bourbon";
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand&subset=vietnamese");
+// Variables
+$prefixer: (
+  "webkit",
+  "moz",
+  "o",
+  "ms"
+);
+
+#wrapper {
+  @include prefixer(display, flex, $prefixer);
+  @include prefixer(align-items, center, $prefixer);
+  @include prefixer(flex-direction, column, $prefixer);
+  height: 100%;
+}
+#alphabet {
+  font-family: "Patrick Hand", cursive;
+  @include prefixer(display, flex, $prefixer);
+  @include prefixer(align-items, center, $prefixer);
+  .char {
+    font-size: 16em;
+    &.regular {
+      font-style: normal;
+    }
+    &.capitalize {
+      text-transform: uppercase;
+    }
+  }
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  @include prefixer(display, flex, $prefixer);
+  @include prefixer(align-items, center, $prefixer);
+  @include prefixer(justify-content, center, $prefixer);
+}
