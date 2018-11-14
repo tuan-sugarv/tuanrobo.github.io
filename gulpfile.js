@@ -1,8 +1,12 @@
 var gulp = require('gulp'),
+    // postcss = require('gulp-postcss'),
     sass = require('gulp-sass'),
-    bourbon = require('node-bourbon'),
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano'),    
     pug = require('gulp-pug'),
     watch = require('gulp-watch');
+
+const postcss = require('gulp-postcss');
 
 gulp.task('html',function() {
     return gulp.src('pug/*.pug')
@@ -14,9 +18,14 @@ gulp.task('html',function() {
 });
 
 gulp.task('sass', function () {
-    return gulp.src(['sass/*.scss'])        
-        .pipe(sass({includePaths: require('node-bourbon').includePaths}).on('error', sass.logError))        
-        .pipe(gulp.dest('css'))        
+    var processors = [
+        autoprefixer,
+        cssnano
+    ];
+    return gulp.src(['sass/*.scss'])    
+        .pipe(sass(({outputStyle: 'expanded'})).on('error', sass.logError))        
+        .pipe(postcss(processors))
+        .pipe(gulp.dest('css'))
 });
 
 

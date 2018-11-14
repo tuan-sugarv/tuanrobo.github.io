@@ -1,4 +1,4 @@
-@import "bourbon";
+// @import "bourbon";
 @import url("https://fonts.googleapis.com/css?family=Patrick+Hand&subset=vietnamese");
 
 body,
@@ -8,22 +8,26 @@ html {
 
 body {
   font-size: 16px;
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 #wrapper {
-  @include display(flex);
-  @include align-items(center);
-  @include prefixer(flex-direction, column, ("webkit", "moz"));
+  display:flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content: center;
   height: 100%;
+  
 }
 #alphabet {
   font-family: "Patrick Hand", cursive;
-  @include display(flex);
-  @include align-items(center);
+  display:flex;
+  align-items:center;
+  flex-direction: column;
+  
   .char {
     font-size: 16em;
     &.regular {

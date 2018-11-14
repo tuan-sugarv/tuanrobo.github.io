@@ -9,9 +9,10 @@ html(lang="en")
 
     body
         .container#wrapper
-            #alphabet
-                p#cap.char.capitalize
-                p#reg.char.regular
+            .card#alphabet
+                .card-body.d-flex
+                    p#cap.char.capitalize
+                    p#reg.char.regular
             button#random.btn.btn-lg.btn-primary Random
         script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
         script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
